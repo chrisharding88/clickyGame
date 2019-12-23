@@ -3,9 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import Cards from './components/Cards'
 import Header from './components/Header'
+import Wrapper from '.components/Wrapper'
+import cards from './cards.json'
 
 class App extends Component {
-  state ={
+  state = {
     score: 0,
     winner:16,
     players: []

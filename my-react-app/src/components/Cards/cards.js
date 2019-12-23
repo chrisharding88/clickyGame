@@ -7,7 +7,7 @@ function Cards (props) {
     return(
     <div className="nbaCards" onClick={() => props.clickCount(props.pic_id)}>
         <div className="img-container">
-            <img alt={props.name} src={props.image}></img>
+            <img alt={props.player} src={props.image}></img>
         </div>
     </div>
     )
