@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Cards from './components/Cards'
-im
+import Header from './components/Header'
 
 class App extends Component {
+  state ={
+    score: 0,
+    winner:16,
+    players: []
+  }
   render() {
     return (
       <div className="App">
