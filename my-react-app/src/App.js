@@ -1,28 +1,31 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Cards from './components/Cards'
-import Header from './components/Header'
-import Wrapper from '.components/Wrapper'
+import nbaCard from './components/Cards'
+import Header from './components/header'
+import Wrapper from './components/wrapper'
 import cards from './cards.json'
 
 class App extends Component {
   state = {
-    score: 0,
-    winner:16,
-    players: []
-  }
+    current_score: 0,
+    high_score: 0,
+    winning_score:16,
+    cards: []
+  };
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+     <Wrapper>
+       <Header current_score={this.state.current_score} high_score={this.state.high_score}></Header>
+       {this.state.cards.map(nbaCard =>( 
+       <Cards>
+         clickCount={this.clickCount}
+         id={cards.pic_id}
+         player={cards.player}
+         image={cards.image}
+       </Cards>
+       ))}
+     </Wrapper>
     );
   }
 }
