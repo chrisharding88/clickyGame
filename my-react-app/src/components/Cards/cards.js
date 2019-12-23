@@ -1,11 +1,12 @@
 import React from "react"
+import "/cards.css"
 
 function Cards (props) {
     console.log(props);
 
     return(
     <div className="nbaCards" onClick={() => props.clickCount(props.pic_id)}>
-        <div className="container">
+        <div className="img-container">
             <img alt={props.name} src={props.image}></img>
         </div>
     </div>
