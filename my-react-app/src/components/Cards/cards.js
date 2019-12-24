@@ -1,5 +1,5 @@
 import React from "react"
-import "/cards.css"
+import "./cards.css"
 
 function Cards (props) {
     console.log(props);
