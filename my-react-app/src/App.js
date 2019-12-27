@@ -28,7 +28,9 @@ class App extends Component {
       
       return this.setState({
         cards: cardOrder.sort(() => Math.random - 0.5),
-        current_score:0
+        // Sets back to zero if the user clicks on the same image
+        current_score:0,
+        message:alert("You're incorrect! Start over again")
       })
 
 
@@ -37,21 +39,27 @@ class App extends Component {
       cardOrder.forEach((img, i) => {
           cardOrder[i].playerClicked = true;     
       })
+
+      // Increases the score when the user clicks on the a different card
+      const scoreIncrement = this.state.current_score + 1
+
+      // When the user's score beats the high score
+      const newHighScore = this.state.current_score > this.state.high_score ? this.state.current_score : this.state.high_score;
+  
+      return this.setState ({
+        cards: cardOrder.sort(() => Math.random() - 0.5),
+        current_score: scoreIncrement,
+        high_score: newHighScore
+      });
     }
 
-    const scoreIncrement = this.state.current_score + 1
-
-    const newHighScore = this.state.current_score > this.state.high_score ? this.state.current_score : this.state.high_score;
-
-    return this.setState ({
-      cards: cardOrder.sort(() => Math.random() - 0.5),
-      current_score: scoreIncrement,
-      high_score: newHighScore
-    });
+  
 
   }
 
   userWins = () =>{
+    // If the user reaches the winning score
+    // Then the message will pop up saying "YOU WIN"
     if (this.state.current_score === this.state.winning_score){
       this.setState({message: alert("YOU WIN!!!!")})
     }
