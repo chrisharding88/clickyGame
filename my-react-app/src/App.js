@@ -63,6 +63,11 @@ class App extends Component {
     if (this.state.current_score === this.state.winning_score){
       this.setState({message: alert("YOU WIN!!!!")})
     }
+    // Resets the game after user wins
+    return this.setState({
+      cards: cardOrder.sort(() => Math.random - 0.5),
+      current_score: 0
+    })
   }
 
 
