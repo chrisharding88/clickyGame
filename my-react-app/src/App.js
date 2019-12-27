@@ -13,7 +13,11 @@ class App extends Component {
     cards: [],
     message: ""
   };
-
+  
+  // Increases the current score
+  scoreIncrement = () =>{
+    this.setState({current_score: this.state.current_score + 1})
+  }
 
   nbaImageClick = (id, playerClicked) => {
     const cardOrder = this.state.cards;
@@ -38,17 +42,16 @@ class App extends Component {
       // If the user clicked the different image
       cardOrder.forEach((img, i) => {
           cardOrder[i].playerClicked = true;     
-      })
-
-      // Increases the score when the user clicks on the a different card
-      const scoreIncrement = this.state.current_score + 1
+      });
 
       // When the user's score beats the high score
       const newHighScore = this.state.current_score > this.state.high_score ? this.state.current_score : this.state.high_score;
   
       return this.setState ({
         cards: cardOrder.sort(() => Math.random() - 0.5),
-        current_score: scoreIncrement,
+        // calls out the scoreIncrement() function in order to increase the current score 
+        // whenever the user clicks a different card
+        current_score: this.scoreIncrement(),
         high_score: newHighScore
       });
     }
@@ -65,7 +68,6 @@ class App extends Component {
     }
     // Resets the game after user wins
     return this.setState({
-      cards: cardOrder.sort(() => Math.random - 0.5),
       current_score: 0
     })
   }
