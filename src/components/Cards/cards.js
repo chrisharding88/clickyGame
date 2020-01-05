@@ -5,9 +5,9 @@ function Cards (props) {
     console.log(props);
 
     return(
-    <div className="nbaCards" onClick={() => props.clickCount(props.pic_id)}>
+    <div className="nbaCards" onClick={() => props.nbaImageClick(props.pic_id)}>
         <div className="img-container">
-            <img alt={props.player} src={props.image}></img>
+            <img alt={props.player} src={props.image} className="nbaImage"></img>
         </div>
     </div>
     )

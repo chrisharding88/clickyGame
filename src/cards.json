@@ -58,7 +58,7 @@
  },
  {
     "pic_id":12,
-    "name":"Jimmy Butler",
+    "player":"Jimmy Butler",
     "image":"https://www.si.com/.image/t_share/MTY3ODIxNDYzMjcxNzc3NTUz/jimmy-butler-out-heat-grizzlies.jpg"
  },
  {
@@ -73,12 +73,12 @@
  },
  {
     "pic_id":15,
-    "name":"John Wall",
+    "player":"John Wall",
     "image":"https://www.nba.com/wizards/sites/wizards/files/getty-images-1056585838.jpg?w=756&h=628"
  },
  {
     "pic_id":16,
-    "name":"Donovan Mitchell",
+    "player":"Donovan Mitchell",
     "image": "https://mk0slamonlinensgt39k.kinstacdn.com/wp-content/uploads/2019/08/GettyImages-1133675422.jpg"
  }
 ]

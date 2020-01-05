@@ -1,6 +1,12 @@
-.nbaCards{
-    width: 300px;
-    height: 300px;
+.nbaImage{
+    width: 240px;
+    height: 250px;
+    margin: 1em;
     position: relative;
-    margin:2em;
+    float: left;
+    
 }
+
+
+
+

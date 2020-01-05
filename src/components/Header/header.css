@@ -1,14 +1,18 @@
 .header{
     background-color: blue;
     color: #FFFFFF;
+    height: 70px;
 }
 
 .title{
     float: left;
     font-family: 'abolition', sans-serif;
     font-weight: bold;
+    font-size: 30px;
 }
 
 .scores{
     float: right;
+    color: black;
+    font-size: 25px;
 }
