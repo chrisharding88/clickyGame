@@ -1,7 +1,8 @@
 .header{
-    background-color: blue;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: blue;
     height: 70px;
+    border-bottom-style: solid;
 }
 
 .title{

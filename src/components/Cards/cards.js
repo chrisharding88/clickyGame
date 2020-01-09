@@ -2,11 +2,9 @@ import React from "react"
 import "./cards.css"
 
 function Cards (props) {
-    console.log(props);
-
     return(
-    <div className="nbaCards" onClick={() => props.nbaImageClick(props.pic_id)}>
-        <div className="img-container">
+    <div className="nbaCards">
+        <div className="img-container" onClick={() => props.onImageClick()}>
             <img alt={props.player} src={props.image} className="nbaImage"></img>
         </div>
     </div>
