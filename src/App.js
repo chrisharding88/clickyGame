@@ -8,6 +8,7 @@ import './App.css';
 class App extends Component {
   constructor(props){
     super(props);
+
     this.state = {
       current_score: 0,
       high_score: 0,
@@ -50,8 +51,10 @@ class App extends Component {
       // Reset and scramble the images
       this.setState({
         cards: this.shuffleCards(cardsOrder),
-        current_score: 0
+        current_score: 0,
+        imageClicked: []
       })
+
     } else {
 
       this.setState({
